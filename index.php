@@ -31,6 +31,8 @@ $days = [
     ],
 ];
 
+
+
 ?>
 
 <!DOCTYPE html>
@@ -45,10 +47,19 @@ $days = [
 
 <body>
 
+
 <h1> Partite NBA della settimana</h1>
 
-<p>  </p>
+<?php 
+for($j = 0; $j < count($days['12/02/2021']); $j++ ){
+    $dayMatch = $days['12/02/2021'][$j];
+    echo "<p>". $dayMatch['homeTeam'] . " - " . $dayMatch['guestTeam'] . " | " . $dayMatch['pointsHomeTeam']. " - ". $dayMatch['pointsGuestTeam']. " </p>";
+}
+for($p = 0; $p < count($days['13/02/2021']); $p++ ){
+    $dayMatch = $days['13/02/2021'][$p];
+    echo "<p>". $dayMatch['homeTeam'] . " - " . $dayMatch['guestTeam'] . " | " . $dayMatch['pointsHomeTeam']. " - ". $dayMatch['pointsGuestTeam']. " </p>";
+}
 
+?>
 </body>
-
 </html>
